@@ -60,9 +60,10 @@ REG1 : reg port map(
 );
 		--kad je reset upaljen sve na 0
 		--kada je enablovan i kada je u sledecem brojacu maksimalna vrednost onda dodajem 1 u brojacu
-counter_r_next <= (others=>'0') when cnt_rst_i='1' else
-					(others=>'0') when (cnt_en_i='1' and counter_r_next=max_cnt) else
-					counter_r+1;
+counter_r_next <= (others=>'0')  when  cnt_rst_i ='1' 	else
+						(others=>'0')  when (cnt_en_i  ='1' 	and counter_r_next=max_cnt) else
+						counter_r+1 	when (cnt_en_i  ='1' 	and counter_r_next<max_cnt) else 
+						counter_r;
 
 one_sec_o<='1' when counter_r=max_cnt else '0';
 		

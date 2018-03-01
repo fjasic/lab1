@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/student/Desktop/ra46-2014/lab1/projects/1_basic/timer_counter_isim_beh.exe" -prj "C:/Users/student/Desktop/ra46-2014/lab1/projects/1_basic/timer_counter_beh.prj" "work.timer_counter" 

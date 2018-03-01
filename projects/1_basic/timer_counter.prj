@@ -1,0 +1,2 @@
+vhdl work "src/rtl/reg.vhd"
+vhdl work "src/rtl/timer_counter.vhd"

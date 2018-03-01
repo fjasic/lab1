@@ -25,13 +25,40 @@ ENTITY timer_counter IS PORT (
 END timer_counter;
 
 ARCHITECTURE rtl OF timer_counter IS
+
 SIGNAL counter_value_r : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL counter_value_r_next : STD_LOGIC_VECTOR(7 DOWNTO 0);
+
+component reg is
+						generic(
+										WIDTH    : positive := 8;
+										RST_INIT : integer := 0
+	);
+
+						port(
+                               i_clk     : IN STD_LOGIC; -- ulazni takt
+                               in_rst    : IN STD_LOGIC; -- reset signal 
+                               i_d       : IN STD_LOGIC_VECTOR(WIDTH -1 downto 0);
+										 o_q		  : OUT STD_LOGIC_VECTOR(WIDTH -1 downto 0)
+                             );
+END component reg;
 
 BEGIN
 
 -- DODATI :
 -- brojac koji na osnovu izbrojanih sekundi pravi izlaz na LE diode
 
+REG2 : reg port map(
+	i_clk => clk_i,
+	in_rst => rst_i,
+	i_d => counter_value_r_next,
+	o_q => counter_value_r
+);
 
+counter_value_r_next <= "00000000" when (cnt_rst_i = '1') else 
+						 counter_value_r + 1 when (cnt_en_i  ='1' and one_sec_i = '1') else counter_value_r ;
+
+
+led_o <= counter_value_r;
 
 END rtl;

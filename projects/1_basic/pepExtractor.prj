@@ -1,0 +1,2 @@
+work	"src/rtl/clk_counter.vhd"
+work	"src/rtl/reg.vhd"

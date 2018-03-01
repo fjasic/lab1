@@ -1,0 +1,3 @@
+vhdl isim_temp "src/rtl/reg.vhd"
+vhdl isim_temp "src/rtl/clk_counter.vhd"
+vhdl isim_temp "clk_counter_i_tb.vhd"

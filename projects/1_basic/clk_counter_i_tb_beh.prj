@@ -1,0 +1,3 @@
+vhdl work "src/rtl/reg.vhd"
+vhdl work "src/rtl/clk_counter.vhd"
+vhdl work "clk_counter_i_tb.vhd"
