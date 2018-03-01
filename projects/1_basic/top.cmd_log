@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "C:/Users/NN/Desktop/lab1/lab1/projects/1_basic/top.xst" -ofn "C:/Users/NN/Desktop/lab1/lab1/projects/1_basic/top.syr" 
+xst -intstyle ise -ifn "C:/Users/NN/Desktop/lab1/lab1/projects/1_basic/top.xst" -ofn "C:/Users/NN/Desktop/lab1/lab1/projects/1_basic/top.syr" 
+xst -intstyle ise -ifn "C:/Users/NN/Desktop/lab1/lab1/projects/1_basic/top.xst" -ofn "C:/Users/NN/Desktop/lab1/lab1/projects/1_basic/top.syr" 
+xst -intstyle ise -ifn "C:/Users/NN/Desktop/lab1/lab1/projects/1_basic/top.xst" -ofn "C:/Users/NN/Desktop/lab1/lab1/projects/1_basic/top.syr" 
+xst -intstyle ise -ifn "C:/Users/NN/Desktop/lab1/lab1/projects/1_basic/top.xst" -ofn "C:/Users/NN/Desktop/lab1/lab1/projects/1_basic/top.syr" 
+xst -intstyle ise -ifn "C:/Users/NN/Desktop/lab1/lab1/projects/1_basic/top.xst" -ofn "C:/Users/NN/Desktop/lab1/lab1/projects/1_basic/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc src/boards/E2LP.ucf -p xc6slx45-fgg676-2 top.ngc top.ngd  

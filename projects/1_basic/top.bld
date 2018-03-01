@@ -1,0 +1,60 @@
+Release 14.6 ngdbuild P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: G:\xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc src/boards/E2LP.ucf -p
+xc6slx45-fgg676-2 top.ngc top.ngd
+
+Reading NGO file "C:/Users/NN/Desktop/lab1/lab1/projects/1_basic/top.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "src/boards/E2LP.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'i_clk_pin', used in period specification
+   'TS_i_clk_pin', was traced into DCM_SP instance clk_gen_i/DMC/dcm_sp_inst.
+   The following new TNM groups and period specifications were generated at the
+   DCM_SP output(s): 
+   CLKFX: <TIMESPEC TS_clk_gen_i_DMC_clkfx = PERIOD "clk_gen_i_DMC_clkfx"
+   TS_i_clk_pin * 2.083333333 HIGH 50%>
+
+Done...
+
+WARNING:NgdBuild:1212 - User specified non-default attribute value (41.666000)
+   was detected for the CLKIN_PERIOD attribute on DCM
+   "clk_gen_i/DMC/dcm_sp_inst".  This does not match the PERIOD constraint value
+   (24000 KHz.).  The uncertainty calculation will use the non-default attribute
+   value.  This could result in incorrect uncertainty calculated for DCM output
+   clocks.
+Checking expanded design ...
+ERROR:NgdBuild:604 - logical block 'timer_fsm_i' with type 'timer_fsm' could not
+   be resolved. A pin name misspelling can cause this, a missing edif or ngc
+   file, case mismatch between the block name and the edif or ngc file name, or
+   the misspelling of a type name. Symbol 'timer_fsm' is not supported in target
+   'spartan6'.
+ERROR:NgdBuild:604 - logical block 'timer_counter_i' with type 'timer_counter'
+   could not be resolved. A pin name misspelling can cause this, a missing edif
+   or ngc file, case mismatch between the block name and the edif or ngc file
+   name, or the misspelling of a type name. Symbol 'timer_counter' is not
+   supported in target 'spartan6'.
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     2
+  Number of warnings:   1
+
+Total memory usage is 227944 kilobytes
+
+Total REAL time to NGDBUILD completion:  14 sec
+Total CPU time to NGDBUILD completion:   7 sec
+
+One or more errors were found during NGDBUILD.  No NGD file will be written.
+
+Writing NGDBUILD log file "top.bld"...
