@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.44 secs
+Total CPU time to Xst completion: 0.29 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.44 secs
+Total CPU time to Xst completion: 0.30 secs
  
 --> Reading design: top.prj
 
@@ -108,24 +108,27 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\NN\Desktop\lab1\lab1\projects\1_basic\ipcore_dir\dcm27_to_50.v" into library work
+Analyzing Verilog file "C:\Users\NN\Downloads\lab1\lab1\projects\1_basic\ipcore_dir\dcm27_to_50.v" into library work
 Parsing module <dcm27_to_50>.
-Parsing VHDL file "C:\Users\NN\Desktop\lab1\lab1\projects\1_basic\src\rtl\timer_fsm.vhd" into library work
+Parsing VHDL file "C:\Users\NN\Downloads\lab1\lab1\projects\1_basic\src\rtl\reg.vhd" into library work
+Parsing entity <reg>.
+Parsing architecture <arch_reg> of entity <reg>.
+Parsing VHDL file "C:\Users\NN\Downloads\lab1\lab1\projects\1_basic\src\rtl\timer_fsm.vhd" into library work
 Parsing entity <timer_fsm>.
 Parsing architecture <rtl> of entity <timer_fsm>.
-Parsing VHDL file "C:\Users\NN\Desktop\lab1\lab1\projects\1_basic\src\rtl\timer_counter.vhd" into library work
+Parsing VHDL file "C:\Users\NN\Downloads\lab1\lab1\projects\1_basic\src\rtl\timer_counter.vhd" into library work
 Parsing entity <timer_counter>.
 Parsing architecture <rtl> of entity <timer_counter>.
-Parsing VHDL file "C:\Users\NN\Desktop\lab1\lab1\projects\1_basic\src\rtl\clk_gen.vhd" into library work
+Parsing VHDL file "C:\Users\NN\Downloads\lab1\lab1\projects\1_basic\src\rtl\clk_gen.vhd" into library work
 Parsing entity <clk_gen>.
 Parsing architecture <rtl> of entity <clk_gen>.
-Parsing VHDL file "C:\Users\NN\Desktop\lab1\lab1\projects\1_basic\src\rtl\clk_counter.vhd" into library work
+Parsing VHDL file "C:\Users\NN\Downloads\lab1\lab1\projects\1_basic\src\rtl\clk_counter.vhd" into library work
 Parsing entity <clk_counter>.
 Parsing architecture <rtl> of entity <clk_counter>.
-Parsing VHDL file "C:\Users\NN\Desktop\lab1\lab1\projects\1_basic\src\rtl\top.vhd" into library work
+Parsing VHDL file "C:\Users\NN\Downloads\lab1\lab1\projects\1_basic\src\rtl\top.vhd" into library work
 Parsing entity <top>.
 Parsing architecture <rtl> of entity <top>.
-WARNING:HDLCompiler:946 - "C:\Users\NN\Desktop\lab1\lab1\projects\1_basic\src\rtl\top.vhd" Line 100: Actual for formal port rst_i is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "C:\Users\NN\Downloads\lab1\lab1\projects\1_basic\src\rtl\top.vhd" Line 100: Actual for formal port rst_i is neither a static name nor a globally static expression
 
 =========================================================================
 *                            HDL Elaboration                            *
@@ -141,17 +144,17 @@ Elaborating module <dcm27_to_50>.
 Elaborating module <IBUFG>.
 
 Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=12,CLKFX_MULTIPLY=25,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=41.666,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="NONE",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
-WARNING:HDLCompiler:1127 - "C:\Users\NN\Desktop\lab1\lab1\projects\1_basic\ipcore_dir\dcm27_to_50.v" Line 114: Assignment to clk0 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\NN\Desktop\lab1\lab1\projects\1_basic\ipcore_dir\dcm27_to_50.v" Line 130: Assignment to status_int ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\NN\Downloads\lab1\lab1\projects\1_basic\ipcore_dir\dcm27_to_50.v" Line 114: Assignment to clk0 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\NN\Downloads\lab1\lab1\projects\1_basic\ipcore_dir\dcm27_to_50.v" Line 130: Assignment to status_int ignored, since the identifier is never used
 
 Elaborating module <BUFG>.
 Back to vhdl to continue elaboration
-WARNING:HDLCompiler:89 - "C:\Users\NN\Desktop\lab1\lab1\projects\1_basic\src\rtl\clk_gen.vhd" Line 46: <srl16> remains a black-box since it has no binding entity.
-WARNING:HDLCompiler:89 - "C:\Users\NN\Desktop\lab1\lab1\projects\1_basic\src\rtl\clk_gen.vhd" Line 60: <fd> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "C:\Users\NN\Downloads\lab1\lab1\projects\1_basic\src\rtl\clk_gen.vhd" Line 46: <srl16> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "C:\Users\NN\Downloads\lab1\lab1\projects\1_basic\src\rtl\clk_gen.vhd" Line 60: <fd> remains a black-box since it has no binding entity.
 
 Elaborating entity <clk_counter> (architecture <rtl>) with generics from library <work>.
-WARNING:HDLCompiler:1127 - "C:\Users\NN\Desktop\lab1\lab1\projects\1_basic\src\rtl\clk_counter.vhd" Line 64: Assignment to counter_r_next ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\NN\Desktop\lab1\lab1\projects\1_basic\src\rtl\clk_counter.vhd" Line 65: Assignment to counter_r_next ignored, since the identifier is never used
+
+Elaborating entity <reg> (architecture <arch_reg>) with generics from library <work>.
 
 Elaborating entity <timer_counter> (architecture <rtl>) from library <work>.
 
@@ -162,42 +165,56 @@ Elaborating entity <timer_fsm> (architecture <rtl>) from library <work>.
 =========================================================================
 
 Synthesizing Unit <top>.
-    Related source file is "C:\Users\NN\Desktop\lab1\lab1\projects\1_basic\src\rtl\top.vhd".
+    Related source file is "C:\Users\NN\Downloads\lab1\lab1\projects\1_basic\src\rtl\top.vhd".
 WARNING:Xst:647 - Input <i_sw<7:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <in_btn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:\Users\NN\Desktop\lab1\lab1\projects\1_basic\src\rtl\top.vhd" line 98: Output port <clk_27MHz_o> of the instance <clk_gen_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\NN\Downloads\lab1\lab1\projects\1_basic\src\rtl\top.vhd" line 98: Output port <clk_27MHz_o> of the instance <clk_gen_i> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <top> synthesized.
 
 Synthesizing Unit <clk_gen>.
-    Related source file is "C:\Users\NN\Desktop\lab1\lab1\projects\1_basic\src\rtl\clk_gen.vhd".
+    Related source file is "C:\Users\NN\Downloads\lab1\lab1\projects\1_basic\src\rtl\clk_gen.vhd".
 WARNING:Xst:653 - Signal <clk_27MHz_o> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
 Unit <clk_gen> synthesized.
 
 Synthesizing Unit <dcm27_to_50>.
-    Related source file is "C:\Users\NN\Desktop\lab1\lab1\projects\1_basic\ipcore_dir\dcm27_to_50.v".
+    Related source file is "C:\Users\NN\Downloads\lab1\lab1\projects\1_basic\ipcore_dir\dcm27_to_50.v".
     Summary:
 	no macro.
 Unit <dcm27_to_50> synthesized.
 
 Synthesizing Unit <clk_counter>.
-    Related source file is "C:\Users\NN\Desktop\lab1\lab1\projects\1_basic\src\rtl\clk_counter.vhd".
+    Related source file is "C:\Users\NN\Downloads\lab1\lab1\projects\1_basic\src\rtl\clk_counter.vhd".
         max_cnt = "10111110101111000010000000"
-WARNING:Xst:647 - Input <clk_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <rst_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <cnt_en_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <cnt_rst_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 26-bit adder for signal <counter_r[25]_GND_12_o_add_1_OUT> created at line 65.
     Summary:
-	no macro.
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Multiplexer(s).
 Unit <clk_counter> synthesized.
+
+Synthesizing Unit <reg>.
+    Related source file is "C:\Users\NN\Downloads\lab1\lab1\projects\1_basic\src\rtl\reg.vhd".
+        WIDTH = 26
+        RST_INIT = 0
+    Found 26-bit register for signal <r_q>.
+    Summary:
+	inferred  26 D-type flip-flop(s).
+Unit <reg> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 26-bit adder                                          : 1
+# Registers                                            : 1
+ 26-bit register                                       : 1
+# Multiplexers                                         : 2
+ 26-bit 2-to-1 multiplexer                             : 2
+
 =========================================================================
 
 =========================================================================
@@ -209,16 +226,23 @@ Found no macro
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 1
- Flip-Flops                                            : 1
+# Adders/Subtractors                                   : 1
+ 26-bit adder                                          : 1
+# Registers                                            : 27
+ Flip-Flops                                            : 27
+# Multiplexers                                         : 2
+ 26-bit 2-to-1 multiplexer                             : 2
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:2170 - Unit top : the following signal(s) form a combinatorial loop: clk_counter_i/counter_r_next<25>, clk_counter_i/cnt_en_i_counter_r_next[25]_AND_2_o.
 
 Optimizing unit <top> ...
+
+Optimizing unit <reg> ...
 
 Mapping all equations...
 WARNING:Xst:2036 - Inserting OBUF on port <o_led<7>> driven by black box <timer_counter>. Possible simulation mismatch.
@@ -238,8 +262,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1
- Flip-Flops                                            : 1
+# Registers                                            : 27
+ Flip-Flops                                            : 27
 
 =========================================================================
 
@@ -262,12 +286,20 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 4
+# BELS                             : 120
 #      GND                         : 1
-#      INV                         : 2
+#      INV                         : 3
+#      LUT1                        : 25
+#      LUT2                        : 3
+#      LUT3                        : 26
+#      LUT4                        : 1
+#      LUT6                        : 9
+#      MUXCY                       : 25
 #      VCC                         : 1
-# FlipFlops/Latches                : 1
+#      XORCY                       : 26
+# FlipFlops/Latches                : 27
 #      FD                          : 1
+#      FDC                         : 26
 # Shift Registers                  : 1
 #      SRL16                       : 1
 # Clock Buffers                    : 1
@@ -289,18 +321,18 @@ Selected Device : 6slx45fgg676-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:               1  out of  54576     0%  
- Number of Slice LUTs:                    3  out of  27288     0%  
-    Number used as Logic:                 2  out of  27288     0%  
+ Number of Slice Registers:              27  out of  54576     0%  
+ Number of Slice LUTs:                   68  out of  27288     0%  
+    Number used as Logic:                67  out of  27288     0%  
     Number used as Memory:                1  out of   6408     0%  
        Number used as SRL:                1
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      4
-   Number with an unused Flip Flop:       3  out of      4    75%  
-   Number with an unused LUT:             1  out of      4    25%  
-   Number of fully used LUT-FF pairs:     0  out of      4     0%  
-   Number of unique control sets:         1
+ Number of LUT Flip Flop pairs used:     81
+   Number with an unused Flip Flop:      54  out of     81    66%  
+   Number with an unused LUT:            13  out of     81    16%  
+   Number of fully used LUT-FF pairs:    14  out of     81    17%  
+   Number of unique control sets:         2
 
 IO Utilization: 
  Number of IOs:                          30
@@ -330,7 +362,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-i_clk                              | DCM_SP:CLKFX           | 2     |
+i_clk                              | DCM_SP:CLKFX           | 28    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -341,9 +373,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 3.792ns (Maximum Frequency: 263.736MHz)
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: 1.461ns
+   Minimum period: 17.871ns (Maximum Frequency: 55.957MHz)
+   Minimum input arrival time before clock: 7.575ns
+   Maximum output required time after clock: 3.351ns
    Maximum combinational path delay: 3.593ns
 
 Timing Details:
@@ -352,44 +384,78 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'i_clk'
-  Clock period: 3.792ns (frequency: 263.736MHz)
-  Total number of paths / destination ports: 1 / 1
+  Clock period: 17.871ns (frequency: 55.957MHz)
+  Total number of paths / destination ports: 703 / 53
 -------------------------------------------------------------------------
-Delay:               1.820ns (Levels of Logic = 0)
-  Source:            clk_gen_i/shift_reg16 (FF)
-  Destination:       clk_gen_i/dff (FF)
+Delay:               8.578ns (Levels of Logic = 9)
+  Source:            clk_counter_i/REG1/r_q_0 (FF)
+  Destination:       clk_counter_i/REG1/r_q_25 (FF)
   Source Clock:      i_clk rising 2.1X
   Destination Clock: i_clk rising 2.1X
 
-  Data Path: clk_gen_i/shift_reg16 to clk_gen_i/dff
+  Data Path: clk_counter_i/REG1/r_q_0 to clk_counter_i/REG1/r_q_25
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     SRL16:CLK->Q          1   1.746   0.000  clk_gen_i/shift_reg16 (clk_gen_i/shift_rst_s)
-     FD:D                      0.074          clk_gen_i/dff
+     FDC:C->Q              2   0.525   0.725  clk_counter_i/REG1/r_q_0 (clk_counter_i/REG1/r_q_0)
+     INV:I->O              1   0.255   0.000  clk_counter_i/Madd_counter_r[25]_GND_12_o_add_1_OUT_lut<0>_INV_0 (clk_counter_i/Madd_counter_r[25]_GND_12_o_add_1_OUT_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  clk_counter_i/Madd_counter_r[25]_GND_12_o_add_1_OUT_cy<0> (clk_counter_i/Madd_counter_r[25]_GND_12_o_add_1_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  clk_counter_i/Madd_counter_r[25]_GND_12_o_add_1_OUT_cy<1> (clk_counter_i/Madd_counter_r[25]_GND_12_o_add_1_OUT_cy<1>)
+     XORCY:CI->O           1   0.206   0.682  clk_counter_i/Madd_counter_r[25]_GND_12_o_add_1_OUT_xor<2> (clk_counter_i/counter_r[25]_GND_12_o_add_1_OUT<2>)
+     LUT3:I2->O            2   0.254   0.834  clk_counter_i/Mmux_counter_r_next191 (clk_counter_i/counter_r_next<2>)
+     LUT2:I0->O            1   0.250   1.137  clk_counter_i/cnt_en_i_counter_r_next[25]_AND_2_o6 (clk_counter_i/cnt_en_i_counter_r_next[25]_AND_2_o6)
+     LUT6:I0->O            1   0.254   1.112  clk_counter_i/cnt_en_i_counter_r_next[25]_AND_2_o7 (clk_counter_i/cnt_en_i_counter_r_next[25]_AND_2_o7)
+     LUT6:I1->O           26   0.254   1.528  clk_counter_i/cnt_en_i_counter_r_next[25]_AND_2_o8 (clk_counter_i/cnt_en_i_counter_r_next[25]_AND_2_o)
+     LUT3:I1->O            2   0.250   0.000  clk_counter_i/Mmux_counter_r_next181 (clk_counter_i/counter_r_next<25>)
+     FDC:D                     0.074          clk_counter_i/REG1/r_q_25
     ----------------------------------------
-    Total                      1.820ns (1.820ns logic, 0.000ns route)
-                                       (100.0% logic, 0.0% route)
+    Total                      8.578ns (2.560ns logic, 6.018ns route)
+                                       (29.8% logic, 70.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'i_clk'
+  Total number of paths / destination ports: 52 / 26
+-------------------------------------------------------------------------
+Offset:              7.575ns (Levels of Logic = 5)
+  Source:            timer_fsm_i:cnt_rst_o (PAD)
+  Destination:       clk_counter_i/REG1/r_q_25 (FF)
+  Destination Clock: i_clk rising 2.1X
+
+  Data Path: timer_fsm_i:cnt_rst_o to clk_counter_i/REG1/r_q_25
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    timer_fsm:cnt_rst_o   26   0.000   1.648  timer_fsm_i (cnt_rst_s)
+     LUT3:I0->O            2   0.235   0.834  clk_counter_i/Mmux_counter_r_next191 (clk_counter_i/counter_r_next<2>)
+     LUT2:I0->O            1   0.250   1.137  clk_counter_i/cnt_en_i_counter_r_next[25]_AND_2_o6 (clk_counter_i/cnt_en_i_counter_r_next[25]_AND_2_o6)
+     LUT6:I0->O            1   0.254   1.112  clk_counter_i/cnt_en_i_counter_r_next[25]_AND_2_o7 (clk_counter_i/cnt_en_i_counter_r_next[25]_AND_2_o7)
+     LUT6:I1->O           26   0.254   1.528  clk_counter_i/cnt_en_i_counter_r_next[25]_AND_2_o8 (clk_counter_i/cnt_en_i_counter_r_next[25]_AND_2_o)
+     LUT3:I1->O            2   0.250   0.000  clk_counter_i/Mmux_counter_r_next181 (clk_counter_i/counter_r_next<25>)
+     FDC:D                     0.074          clk_counter_i/REG1/r_q_25
+    ----------------------------------------
+    Total                      7.575ns (1.317ns logic, 6.258ns route)
+                                       (17.4% logic, 82.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'i_clk'
-  Total number of paths / destination ports: 2 / 2
+  Total number of paths / destination ports: 28 / 3
 -------------------------------------------------------------------------
-Offset:              1.461ns (Levels of Logic = 1)
-  Source:            clk_gen_i/dff (FF)
-  Destination:       timer_fsm_i:rst_i (PAD)
+Offset:              3.351ns (Levels of Logic = 2)
+  Source:            clk_counter_i/REG1/r_q_20 (FF)
+  Destination:       timer_counter_i:one_sec_i (PAD)
   Source Clock:      i_clk rising 2.1X
 
-  Data Path: clk_gen_i/dff to timer_fsm_i:rst_i
+  Data Path: clk_counter_i/REG1/r_q_20 to timer_counter_i:one_sec_i
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               1   0.525   0.681  clk_gen_i/dff (clk_gen_i/dff_out_r)
-     INV:I->O              0   0.255   0.000  clk_gen_i/reset_o1_INV_0 (rst_locked_s)
-    timer_fsm:rst_i            0.000          timer_fsm_i
+     FDC:C->Q              2   0.525   1.181  clk_counter_i/REG1/r_q_20 (clk_counter_i/REG1/r_q_20)
+     LUT6:I0->O            1   0.254   1.137  clk_counter_i/one_sec_o<25>1 (clk_counter_i/one_sec_o<25>)
+     LUT6:I0->O            0   0.254   0.000  clk_counter_i/one_sec_o<25>5 (one_sec_s)
+    timer_counter:one_sec_i        0.000          timer_counter_i
     ----------------------------------------
-    Total                      1.461ns (0.780ns logic, 0.681ns route)
-                                       (53.4% logic, 46.6% route)
+    Total                      3.351ns (1.033ns logic, 2.318ns route)
+                                       (30.8% logic, 69.2% route)
 
 =========================================================================
 Timing constraint: Default path analysis
@@ -419,20 +485,20 @@ Clock to Setup on destination clock i_clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-i_clk          |    1.820|         |         |         |
+i_clk          |    8.578|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 22.00 secs
-Total CPU time to Xst completion: 22.52 secs
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 15.83 secs
  
 --> 
 
 Total memory usage is 316832 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   22 (   0 filtered)
+Number of warnings :   17 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 
