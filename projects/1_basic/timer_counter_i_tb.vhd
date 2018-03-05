@@ -2,15 +2,15 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   10:55:31 03/01/2018
+-- Create Date:   23:45:31 03/04/2018
 -- Design Name:   
--- Module Name:   C:/Users/student/Desktop/ra46-2014/lab1/projects/1_basic/clk_counter_i_tb.vhd
+-- Module Name:   C:/Users/NN/Desktop/LPRS2/lab1/projects/1_basic/timer_counter_i_tb.vhd
 -- Project Name:  lab1_basic
 -- Target Device:  
 -- Tool versions:  
 -- Description:   
 -- 
--- VHDL Test Bench Created by ISE for module: clk_counter
+-- VHDL Test Bench Created by ISE for module: timer_counter
 -- 
 -- Dependencies:
 -- 
@@ -32,20 +32,21 @@ USE ieee.std_logic_1164.ALL;
 -- arithmetic functions with Signed or Unsigned values
 --USE ieee.numeric_std.ALL;
  
-ENTITY clk_counter_i_tb IS
-END clk_counter_i_tb;
+ENTITY timer_counter_i_tb IS
+END timer_counter_i_tb;
  
-ARCHITECTURE behavior OF clk_counter_i_tb IS 
+ARCHITECTURE behavior OF timer_counter_i_tb IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT clk_counter
+    COMPONENT timer_counter
     PORT(
          clk_i : IN  std_logic;
          rst_i : IN  std_logic;
+         one_sec_i : IN  std_logic;
          cnt_en_i : IN  std_logic;
          cnt_rst_i : IN  std_logic;
-         one_sec_o : OUT  std_logic
+         led_o : OUT  std_logic_vector(7 downto 0)
         );
     END COMPONENT;
     
@@ -53,11 +54,12 @@ ARCHITECTURE behavior OF clk_counter_i_tb IS
    --Inputs
    signal clk_i : std_logic := '0';
    signal rst_i : std_logic := '0';
+   signal one_sec_i : std_logic := '0';
    signal cnt_en_i : std_logic := '0';
    signal cnt_rst_i : std_logic := '0';
 
  	--Outputs
-   signal one_sec_o : std_logic;
+   signal led_o : std_logic_vector(7 downto 0);
 
    -- Clock period definitions
    constant clk_i_period : time := 10 ns;
@@ -65,12 +67,13 @@ ARCHITECTURE behavior OF clk_counter_i_tb IS
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: clk_counter PORT MAP (
+   uut: timer_counter PORT MAP (
           clk_i => clk_i,
           rst_i => rst_i,
+          one_sec_i => one_sec_i,
           cnt_en_i => cnt_en_i,
           cnt_rst_i => cnt_rst_i,
-          one_sec_o => one_sec_o
+          led_o => led_o
         );
 
    -- Clock process definitions
@@ -87,16 +90,14 @@ BEGIN
    stim_proc: process
    begin		
       -- hold reset state for 100 ns.
-		rst_i<='0';
+      rst_i<='0';
       wait for 100 ns;	
 		rst_i<='1';
 		cnt_en_i<='1';
 		wait for 1 ms;
-		
       wait for clk_i_period*10;
 
       -- insert stimulus here 
-		
 
       wait;
    end process;

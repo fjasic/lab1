@@ -1,2 +1,0 @@
-vhdl isim_temp "src/rtl/reg.vhd"
-vhdl isim_temp "src/rtl/timer_counter.vhd"

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.32 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.32 secs
  
 --> Reading design: timer_counter.prj
 
@@ -108,10 +108,10 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "C:\Users\student\Desktop\ra46-2014\lab1\projects\1_basic\src\rtl\reg.vhd" into library work
+Parsing VHDL file "C:\Users\NN\Desktop\LPRS2\lab1\projects\1_basic\src\rtl\reg.vhd" into library work
 Parsing entity <reg>.
 Parsing architecture <arch_reg> of entity <reg>.
-Parsing VHDL file "C:\Users\student\Desktop\ra46-2014\lab1\projects\1_basic\src\rtl\timer_counter.vhd" into library work
+Parsing VHDL file "C:\Users\NN\Desktop\LPRS2\lab1\projects\1_basic\src\rtl\timer_counter.vhd" into library work
 Parsing entity <timer_counter>.
 Parsing architecture <rtl> of entity <timer_counter>.
 
@@ -128,7 +128,8 @@ Elaborating entity <reg> (architecture <arch_reg>) with generics from library <w
 =========================================================================
 
 Synthesizing Unit <timer_counter>.
-    Related source file is "C:\Users\student\Desktop\ra46-2014\lab1\projects\1_basic\src\rtl\timer_counter.vhd".
+    Related source file is "C:\Users\NN\Desktop\LPRS2\lab1\projects\1_basic\src\rtl\timer_counter.vhd".
+WARNING:Xst:647 - Input <rst_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 8-bit adder for signal <counter_value_r[7]_GND_5_o_add_0_OUT> created at line 59.
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -136,7 +137,7 @@ Synthesizing Unit <timer_counter>.
 Unit <timer_counter> synthesized.
 
 Synthesizing Unit <reg>.
-    Related source file is "C:\Users\student\Desktop\ra46-2014\lab1\projects\1_basic\src\rtl\reg.vhd".
+    Related source file is "C:\Users\NN\Desktop\LPRS2\lab1\projects\1_basic\src\rtl\reg.vhd".
         WIDTH = 8
         RST_INIT = 0
     Found 8-bit register for signal <r_q>.
@@ -228,8 +229,8 @@ Primitive and Black Box Usage:
 #      FDC                         : 8
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 12
-#      IBUF                        : 4
+# IO Buffers                       : 11
+#      IBUF                        : 3
 #      OBUF                        : 8
 
 Device utilization summary:
@@ -252,7 +253,7 @@ Slice Logic Distribution:
 
 IO Utilization: 
  Number of IOs:                          13
- Number of bonded IOBs:                  13  out of    358     3%  
+ Number of bonded IOBs:                  12  out of    358     3%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -290,7 +291,7 @@ Timing Summary:
 Speed Grade: -2
 
    Minimum period: 2.907ns (Maximum Frequency: 343.997MHz)
-   Minimum input arrival time before clock: 3.868ns
+   Minimum input arrival time before clock: 3.960ns
    Maximum output required time after clock: 4.380ns
    Maximum combinational path delay: No path found
 
@@ -325,22 +326,21 @@ Delay:               2.907ns (Levels of Logic = 2)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_i'
   Total number of paths / destination ports: 32 / 16
 -------------------------------------------------------------------------
-Offset:              3.868ns (Levels of Logic = 3)
-  Source:            one_sec_i (PAD)
+Offset:              3.960ns (Levels of Logic = 2)
+  Source:            cnt_rst_i (PAD)
   Destination:       REG2/r_q_7 (FF)
   Destination Clock: clk_i rising
 
-  Data Path: one_sec_i to REG2/r_q_7
+  Data Path: cnt_rst_i to REG2/r_q_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             5   1.328   1.069  one_sec_i_IBUF (one_sec_i_IBUF)
-     LUT3:I0->O            4   0.235   0.912  Mmux_counter_value_r_next211 (Mmux_counter_value_r_next21)
-     LUT6:I4->O            1   0.250   0.000  Mmux_counter_value_r_next81 (counter_value_r_next<7>)
-     FDC:D                     0.074          REG2/r_q_7
+     IBUF:I->O             9   1.328   0.975  cnt_rst_i_IBUF (cnt_rst_i_IBUF)
+     INV:I->O              8   0.255   0.943  REG2/in_rst_inv1_INV_0 (REG2/in_rst_inv)
+     FDC:CLR                   0.459          REG2/r_q_0
     ----------------------------------------
-    Total                      3.868ns (1.887ns logic, 1.981ns route)
-                                       (48.8% logic, 51.2% route)
+    Total                      3.960ns (2.042ns logic, 1.918ns route)
+                                       (51.6% logic, 48.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_i'
@@ -377,14 +377,14 @@ clk_i          |    2.907|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.76 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 12.79 secs
  
 --> 
 
-Total memory usage is 258412 kilobytes
+Total memory usage is 312932 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

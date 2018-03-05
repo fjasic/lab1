@@ -50,13 +50,14 @@ BEGIN
 
 REG2 : reg port map(
 	i_clk => clk_i,
-	in_rst => rst_i,
+	in_rst => cnt_rst_i,
 	i_d => counter_value_r_next,
 	o_q => counter_value_r
 );
 
-counter_value_r_next <= "00000000" when (cnt_rst_i = '1') else 
-						 counter_value_r + 1 when (cnt_en_i  ='1' and one_sec_i = '1') else counter_value_r ;
+counter_value_r_next <= (others=>'0') when (cnt_rst_i = '1') else 
+						 counter_value_r + 1 when (cnt_en_i  ='1' and one_sec_i = '1') else 
+						 counter_value_r ;
 
 
 led_o <= counter_value_r;
